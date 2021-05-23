@@ -7,7 +7,6 @@ class ApplicationController < Sinatra::Base
     end
 
     get '/' do 
-        puts "making sure conole is working"
-        "just making sure we're online!!!"
+        erb :"/welcome"
     end
 end
