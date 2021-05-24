@@ -8,6 +8,21 @@
     </meta>
     <body>
         <header class="project-name">A Week @ A Time</header>
+        <div class="container">
+        <% if logged_in? %>
+            <ul>
+                <li><a href='/user/home'>Your Week</a></li>
+                <li><Create a Task</li>
+                <li>Set a Goal</li>
+                <li><a href='/sessions/logout'>Sign Out</a></li>
+            </ul>
+        <% else %>
+          <ul>
+            <li><a href='/users/signup'>Sign Up</a></li>
+            <li><a href='/sessions/login'>Log In</a></li>
+          </ul>
+        <% end %>
+        </div>
         <%= yield %>
     </body>
 </html>

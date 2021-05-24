@@ -1,10 +1,34 @@
 body {
     background-color: rgba(41, 41, 41, 0.712);
+    text-align: center;
 }
 
 .project-name {
     color: red;
     opacity: 0.7;
-    font-size: xx-large;
+    font-size: 100px;
     text-align: center;
 }
+
+
+  
+   ul li  {
+    
+        display: block;
+ 
+        float: none;
+        font-size: 20px;
+        width: 10%;
+        background-color: black;
+        
+        font-size: 24px;
+
+        overflow: auto;
+        border: 4px solid darkblue;
+    
+        }
+  
+
+  .subheader {
+      font-family: cursive;      
+    } 

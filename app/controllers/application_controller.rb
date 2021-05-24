@@ -1,3 +1,5 @@
+require './config/environment'
+
 class ApplicationController < Sinatra::Base
 
     configure do 
@@ -11,6 +13,7 @@ class ApplicationController < Sinatra::Base
         erb :"/welcome"
     end
 
+  
     helpers do 
         def logged_in?
             !!session[:user_id]

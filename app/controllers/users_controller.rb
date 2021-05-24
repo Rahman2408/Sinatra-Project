@@ -5,10 +5,14 @@ class UsersController < ApplicationController
     end
 
     post '/users' do
-        binding.pry
+      
         user = User.create(params)
         session[:user_id] = user.id 
-        redirect "/"
-        
+    
+        redirect "/" 
+    end
+
+    get '/users/home' do 
+        "home page goes here"
     end
 end
