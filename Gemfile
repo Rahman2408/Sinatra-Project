@@ -10,3 +10,4 @@ gem 'require_all'
 gem 'tux' 
 gem 'bcrypt'
 gem 'shotgun'
+gem "dotenv", "~> 2.7"
