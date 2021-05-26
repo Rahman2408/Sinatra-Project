@@ -9,12 +9,10 @@ class SessionsController < ApplicationController
         
        if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-
+        redirect "/"
        else
         erb :"sessions/login-error"
-        
        end
-        
     end
 
     get '/sessions/logout' do
