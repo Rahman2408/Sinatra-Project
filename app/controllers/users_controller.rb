@@ -13,6 +13,6 @@ class UsersController < ApplicationController
     end
 
     get '/users/home' do 
-        "home page goes here"
+        erb :"/users/home"
     end
 end

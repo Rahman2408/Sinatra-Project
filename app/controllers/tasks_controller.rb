@@ -21,7 +21,6 @@ class TasksController < ApplicationController
     end
 
     patch '/tasks/:id/edit' do
-        binding.pry
         task = Task.find(params[:id])
         task.update(params[:task])
         redirect "/tasks/#{task.id}"
@@ -36,5 +35,11 @@ class TasksController < ApplicationController
     get '/tasks/:id' do
         @task = Task.find(params[:id])
         erb :"/tasks/show"
+    end
+
+    post '/tasks/destroy' do
+        @tasks = Task.all.where(user_id: current_user.id)
+        @tasks.destroy_all
+        redirect "/tasks"
     end
 end

@@ -70,3 +70,10 @@ header {
     color: darkred;
     
   }
+  #destroy-prompt {
+    text-align: center; 
+    
+    font-family: cursive;
+    color: darkred;
+    
+  }

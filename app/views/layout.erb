@@ -2,7 +2,7 @@
 <html>
     <meta>
     <head>
-        <title>A Task @ A Time</title>
+        <title>A T @ A T</title>
         <link rel="stylesheet" href="/stylesheets/style.css" >
     </head>
     </meta>
@@ -11,8 +11,8 @@
     <div class="img-area">
     <header class="project-name">A Task @ A Time</header>
         <div class="container">
+        <h1 style="font-family: cursive;" >Your Latest To-Do List</h1>
         <% if logged_in? %>
-            <h1>Welcome <%= current_user.username.capitalize %>!</h1>
             <ul>
                 <li><a href='/users/home'>Home</a></li>
                 <li><a href='/tasks'>My Tasks</a></li>
@@ -20,7 +20,7 @@
                 <li><a href='/sessions/logout'>Sign Out</a></li>
             </ul>
         <% else %>
-          <h1>Welcome!</h1>  
+          
           <ul>
             <li><a href='/sessions/login'>Log In</a></li>
             <li><a href='/users/signup'>Sign Up</a></li>
