@@ -43,6 +43,7 @@ header {
   .container li:hover {
             background-color: red;
             transition: background .7s;
+            opacity: 0.8;
         }
 
   .subheader {

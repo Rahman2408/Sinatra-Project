@@ -4,6 +4,9 @@
     <% @tasks.each do |task| %>   
         <li><a href="tasks/<%=task.id%>"><%= task.name %></a></li>
     <% end %>
+    <br><form action="/tasks/new" style="text-align: left;">
+    <input type="submit" value="Add a New Task">
+</form>
 </ul>
 
 <h3 id="taskinstruct">Click on any of your tasks above to view, edit, or delete them.</h4>

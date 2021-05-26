@@ -15,11 +15,12 @@
             <h1>Welcome <%= current_user.username.capitalize %>!</h1>
             <ul>
                 <li><a href='/user/home'>Home</a></li>
-                <li><a href='/tasks/new'>Create a Task</a></li>
                 <li><a href='/tasks'>My Tasks</a></li>
+                <li><a href='/tasks/new'>Create a Task</a></li>
                 <li><a href='/sessions/logout'>Sign Out</a></li>
             </ul>
         <% else %>
+          <h1>Welcome!</h1>  
           <ul>
             <li><a href='/sessions/login'>Log In</a></li>
             <li><a href='/users/signup'>Sign Up</a></li>
@@ -29,5 +30,4 @@
         </div>
         <%= yield %>
     </body>
-   <!-- <footer><h4>© Graphics & Logic by Rahman Elsirafy</h4></footer> -->
 </html>

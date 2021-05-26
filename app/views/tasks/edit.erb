@@ -1,0 +1,13 @@
+<h1>Edit: <%= @task.name %></h1>
+
+<form action="/tasks/<%=@task.id%>/edit" method="POST">
+<input type="hidden" id="hidden" name="_method" value="PATCH">
+<strong><label>Name: </label></strong>
+        <input type="text" name="name" id="name" value="<%= @task.name %>" required><br><br><br>
+    <h3>Desription:</h3>
+        <textarea name="description" id="description" rows="10" cols="50"><%= @task.description %></textarea><br>
+    <label for="notes">Notes:</label><br>
+        <textarea name="notes" id="notes"><%= @task.notes %></textarea><br><br>
+
+        <input type="submit" value="Update Task">
+</form>
