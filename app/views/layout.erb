@@ -2,22 +2,23 @@
 <html>
     <meta>
     <head>
-        <title>A T @ A T</title>
+        <title>A Task @ A Time</title>
         <link rel="stylesheet" href="/stylesheets/style.css" >
     </head>
     </meta>
     <body>
     
     <div class="img-area">
-    <h1 id="project-name">A Task @ A Time</h1>
+    <h1>A Task @ A Time</h1>
         
-        <h1 style="font-family: cursive;" >Your Latest To-Do List</h1>
-        <div class="container">
+        <h2 style="font-family: cursive;" >Your Best Task Tracker</h2>
+       
+       
         <% if logged_in? %>
             <ul>
                 <li><a href='/users/home'>Home</a></li>
                 <li><a href='/tasks'>My Tasks</a></li>
-                <li><a href='/tasks/new'>New Task</a></li>
+                <li><a href='/tasks/new'>Add-a-Task</a></li>
                 <li><a href='/sessions/logout'>Sign Out</a></li>
             </ul>
         <% else %>
@@ -27,7 +28,12 @@
           </ul>
         <% end %>
         </div>
-        
+
+        <% flash.keys.each do |type| %>
+            <div data-alert class="flash <%= type %> alert-box radius">
+                <h4 style="color: red;"><%= flash[type] %></h4>
+            </div>
+        <% end %>
         <%= yield %>
     </body>
 </html>

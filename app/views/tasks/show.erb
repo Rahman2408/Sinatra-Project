@@ -1,13 +1,15 @@
+<div id="task">
 
-<h1 ><%= @task.name.capitalize %></h1>
 
-<br><br>
-<h2 style="text-decoration: underline;">Desription:</h2>
-    <p style="color: red; font-size:40px;"><%= @task.description %> </p>
+<h1><%= @task.name.upcase%></h1>
+
+
+<h3>Desription:</h3>
+    <p><%= @task.description %> </p>
     <br>
 
-<h3 style="text-decoration: underline;">Notes:</h3>
-    <p style="color: red; font-size:20px;"><%= @task.notes %></p>
+<h3>Notes:</h3>
+    <p><%= @task.notes %></p>
 <br><br>
 
 <form action="/tasks/<%=@task.id%>/edit">
@@ -25,3 +27,4 @@
 <input type="hidden" id="hidden" name="_method" value="delete">
     <input type="submit" value="Delete">
 </form>
+</div>

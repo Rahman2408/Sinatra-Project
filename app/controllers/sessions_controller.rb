@@ -1,24 +1,23 @@
 class SessionsController < ApplicationController
-    # flash[:error]= "Hmmmm...Please check you spelled your Username or Password correctly!"
-    # flash[:message]="SUCCESS! Logging you in.."
+
     
     get '/sessions/login' do 
-        erb :"sessions/login"
+        erb :"/sessions/login"
     end
 
-    get '/sessions/error' do 
-        erb :"/sessions/login-error"
-    end 
+    get '/sessions/login-e' do
+        flash.now[:error]= "Hmmmm.. It looks like the credentials entered are invalid. Please check you spelled your Username or Password correctly or create an account to get started!"
+        erb :"/sessions/login"
+    end
     
     post '/sessions' do 
         user = User.find_by_username(params[:username])
         
        if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        
         redirect "/users/home"
        else
-        flash[:error]= "Hmmmm...Please check you spelled your Username or Password correctly!"
+        redirect "/sessions/login-e"
         end
     end
 

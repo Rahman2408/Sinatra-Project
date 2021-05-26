@@ -1,12 +1,14 @@
+<div id="main">
 <h1>Create New Task</h1>
 
 <form action="/tasks" method="POST">
 <strong><label>Name: </label></strong>
-        <input type="text" name="task[name]" id="name" placeholder="Task Name" required><br><br><br>
+        <input type="text" name="task[name]" id="name" size="50" placeholder="Task Name" required><br><br><br>
     <h3>Desription:</h3>
         <textarea name="task[description]" id="description" rows="10" cols="50" placeholder="Describe any specific details."></textarea><br>
     <label for="notes">Notes:</label><br>
-        <textarea name="task[notes]" id="notes" placeholder="Any sidenotes to remember?"></textarea><br><br>
+        <textarea name="task[notes]" id="notes" cols="50" placeholder="Any sidenotes to remember?"></textarea><br><br>
 
         <input type="submit" value="Create New Task">
 </form>
+</div>
