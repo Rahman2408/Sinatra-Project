@@ -11,3 +11,5 @@ gem 'tux'
 gem 'bcrypt'
 gem 'shotgun'
 gem "dotenv", "~> 2.7"
+
+gem "sinatra-flash", "~> 0.3.0"
