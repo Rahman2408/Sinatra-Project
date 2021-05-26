@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     end
 
     get '/users/home' do 
+        @completed_tasks = current_user.tasks.where(completed: true)
         erb :"/users/home"
     end
 end

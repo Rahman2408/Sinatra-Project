@@ -78,10 +78,30 @@ body, html {
     
   }
 
-  #progress {
+  #progress h1 {
+    text-align: left;
     
     color: darkred;
     font-family: cursive;
-  }
 
+  }
+  #progress h2 {
+    text-decoration: underline;
+    text-align: left;
+  
+    font-family: cursive;
+  }
+ #progress li{
+   text-align: left;
+   font-size: 20px;
+ }
+
+ #progress ul, p { 
+   text-align: left; 
+ }
+ #progress h4 {
+  font-weight:bold;
+  text-align: left;
+
+ }
   
