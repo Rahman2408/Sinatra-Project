@@ -35,14 +35,9 @@ header {
         opacity: 0.9;
         width: 10%;
         font-size: 20px;
-        
         background-color:powderblue;
-        
         font-size: 24px;
-
-        
-        border: 2px solid red;)
-    
+        border: 2px solid red;
         }
         ul li:hover {
             background-color: red;
