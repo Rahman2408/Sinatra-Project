@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         user = User.create(params)
         session[:user_id] = user.id 
     
-        redirect "/" 
+        redirect "/users/home" 
     end
 
     get '/users/home' do 

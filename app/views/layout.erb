@@ -14,7 +14,7 @@
         <% if logged_in? %>
             <h1>Welcome <%= current_user.username.capitalize %>!</h1>
             <ul>
-                <li><a href='/user/home'>Home</a></li>
+                <li><a href='/users/home'>Home</a></li>
                 <li><a href='/tasks'>My Tasks</a></li>
                 <li><a href='/tasks/new'>Create a Task</a></li>
                 <li><a href='/sessions/logout'>Sign Out</a></li>

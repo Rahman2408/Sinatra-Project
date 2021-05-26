@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
     get '/tasks' do
-        @tasks = Task.all 
+        @tasks = Task.all.where(user_id: current_user.id)
         erb :"/tasks/index"
     end
 
@@ -9,8 +9,9 @@ class TasksController < ApplicationController
     end
 
     post '/tasks' do 
-        new_task = Task.create(name: params[:name], description: params[:description], notes: params[:notes])
+        new_task = Task.create(params[:task])
         new_task.user_id = current_user.id
+        new_task.save
         redirect "/tasks/#{new_task.id}"
     end
 
@@ -20,8 +21,9 @@ class TasksController < ApplicationController
     end
 
     patch '/tasks/:id/edit' do
+        binding.pry
         task = Task.find(params[:id])
-        task.update(name: params[:name], description: params[:description], notes: params[:notes])
+        task.update(params[:task])
         redirect "/tasks/#{task.id}"
     end
 
