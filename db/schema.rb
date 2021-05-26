@@ -14,12 +14,12 @@ ActiveRecord::Schema.define(version: 2021_05_26_062530) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
+    t.string "day"
     t.string "description"
     t.string "notes"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
     t.string "username"
     t.string "password_digest"
   end
