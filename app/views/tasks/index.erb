@@ -1,6 +1,9 @@
-<h2>Here's a list of all your tasks</h2>
-<ul>
+<h1 id="taskhead">Your Tasks:</h1>
+
+<ul id="tasklist">
     <% @tasks.each do |task| %>   
         <li><a href="tasks/<%=task.id%>"><%= task.name %></a></li>
     <% end %>
 </ul>
+
+<h3 id="taskinstruct">Click on any of your tasks above to view, edit, or delete them.</h4>

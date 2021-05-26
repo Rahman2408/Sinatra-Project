@@ -1,12 +1,12 @@
-<h1><%= @task.name %></h1>
+<h1><%= @task.name.capitalize %></h1>
 
 
 <h3>Desription:</h3><br>
-    <p><%= @task.description %> </p>
+    <p style="color: red; font-size:40px;"><%= @task.description %> </p>
     <br>
 
 <h3>Notes:</h3><br>
-    <p><%= @task.notes %></p>
+    <p style="color: red; font-size:20px;"><%= @task.notes %></p>
 <br><br>
 
 <form action="/tasks/<%=@task.id%>/edit)">

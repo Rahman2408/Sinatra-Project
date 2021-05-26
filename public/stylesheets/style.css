@@ -30,13 +30,14 @@ header {
   
   .container li {
     
-        display: block;
+        display:inline-block;
         list-style-type: none;
         opacity: 0.9;
-        width: 10%;
+        width: 26%;
+        font-family:monospace;
         font-size: 20px;
         background-color:powderblue;
-        font-size: 24px;
+        font-size: 25px;
         border: 2px solid red;
         }
   .container li:hover {
@@ -48,3 +49,23 @@ header {
       font-family: cursive;      
     } 
     
+  #tasklist li {
+      font-size: 30px;
+      text-align: left;
+      
+  }
+  #taskhead {
+    text-align: left; 
+    text-decoration: underline; 
+    font-family: cursive;
+    color: darkred;
+    font-size: 40px;
+    opacity: .7;
+  }
+  #taskinstruct {
+    text-align: left; 
+    
+    font-family: cursive;
+    color: darkred;
+    
+  }

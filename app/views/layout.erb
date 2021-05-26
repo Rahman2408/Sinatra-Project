@@ -2,21 +2,21 @@
 <html>
     <meta>
     <head>
-        <title>A Week @ A Time</title> 
+        <title>A Task @ A Time</title>
         <link rel="stylesheet" href="/stylesheets/style.css" >
     </head>
     </meta>
     <body>
     
     <div class="img-area">
-    <header class="project-name">A Week @ A Time</header>
+    <header class="project-name">A Task @ A Time</header>
         <div class="container">
         <% if logged_in? %>
             <h1>Welcome <%= current_user.username.capitalize %>!</h1>
             <ul>
                 <li><a href='/user/home'>Home</a></li>
-                <li><a href='/'>Create a Task</a></li>
-                <li><a href='/tasks'>All Tasks</a></li>
+                <li><a href='/tasks/new'>Create a Task</a></li>
+                <li><a href='/tasks'>My Tasks</a></li>
                 <li><a href='/sessions/logout'>Sign Out</a></li>
             </ul>
         <% else %>
