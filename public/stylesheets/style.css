@@ -39,7 +39,7 @@ header {
         font-size: 24px;
         border: 2px solid red;
         }
-        ul li:hover {
+  .container li:hover {
             background-color: red;
             transition: background .7s;
         }

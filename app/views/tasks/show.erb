@@ -1,0 +1,24 @@
+<h1><%= @task.name %></h1>
+
+
+<h3>Desription:</h3><br>
+    <p><%= @task.description %> </p>
+    <br>
+
+<h3>Notes:</h3><br>
+    <p><%= @task.notes %></p>
+<br><br>
+
+<form action="/tasks/<%=@task.id%>/edit)">
+    <input type="submit" value="Edit">
+</form>
+
+<br>
+
+<form action="/tasks/<%=@task.id%>/delete)">
+    <input type="submit" value="Delete">
+</form>
+
+
+
+

@@ -12,10 +12,11 @@
     <header class="project-name">A Week @ A Time</header>
         <div class="container">
         <% if logged_in? %>
+            <h1>Welcome <%= current_user.username.capitalize %>!</h1>
             <ul>
-                <li><a href='/user/home'>Your Week</a></li>
+                <li><a href='/user/home'>Home</a></li>
                 <li><a href='/'>Create a Task</a></li>
-                <li><a href='/'>Set a Goal</a></li>
+                <li><a href='/tasks'>All Tasks</a></li>
                 <li><a href='/sessions/logout'>Sign Out</a></li>
             </ul>
         <% else %>
