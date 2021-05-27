@@ -5,19 +5,14 @@ class SessionsController < ApplicationController
         erb :"/sessions/login"
     end
 
-    get '/sessions/login-e' do
-        flash[:error]= "Hmmmm.. It looks like the credentials entered are invalid. Please check you spelled your Username and/or Password correctly or create an account to get started!"
-        erb :"/sessions/login"
-    end
-    
     post '/sessions' do 
         user = User.find_by_username(params[:username])
-        
        if user && user.authenticate(params[:password])
         session[:user_id] = user.id
         redirect "/users/home"
        else
-        redirect "/sessions/login-e"
+        flash[:errors]= "Invalid credentials"
+        redirect "/sessions/login"
         end
     end
 

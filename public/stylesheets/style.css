@@ -145,9 +145,8 @@
   text-decoration: underline;
   color:darkred;
   font-family: cursive;
-
 }
-#errors li {
+#errors  {
   color: red;
   list-style-type: none;
 }

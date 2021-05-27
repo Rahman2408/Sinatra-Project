@@ -10,7 +10,7 @@ class UsersController < ApplicationController
             session[:user_id] = user.id 
             redirect "/users/home" 
         else
-            flash[:errors] = user.errors.full_messages
+            flash[:errors] = user.errors.full_messages.first
             redirect "/users/signup"
         end
     end
