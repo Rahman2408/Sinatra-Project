@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     end
 
     get '/sessions/login-e' do
-        flash.now[:error]= "Hmmmm.. It looks like the credentials entered are invalid. Please check you spelled your Username or Password correctly or create an account to get started!"
+        flash[:error]= "Hmmmm.. It looks like the credentials entered are invalid. Please check you spelled your Username and/or Password correctly or create an account to get started!"
         erb :"/sessions/login"
     end
     

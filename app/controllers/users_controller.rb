@@ -6,12 +6,17 @@ class UsersController < ApplicationController
 
     post '/users' do
         user = User.create(params)
-        session[:user_id] = user.id 
-        redirect "/users/home" 
+        if user.valid?
+            session[:user_id] = user.id 
+            redirect "/users/home" 
+        else
+            flash[:errors] = user.errors.full_messages
+            redirect "/users/signup"
+        end
     end
-
+    
     get '/users/home' do 
-        @completed_tasks = current_user.tasks.where(completed: true)
-        erb :"/users/home"
+        erb :"users/home"
     end
+    
 end

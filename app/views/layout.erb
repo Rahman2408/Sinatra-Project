@@ -28,12 +28,15 @@
           </ul>
         <% end %>
         </div>
-
-        <% flash.keys.each do |type| %>
-            <div data-alert class="flash <%= type %> alert-box radius">
-                <h4 style="color: red;"><%= flash[type] %></h4>
-            </div>
-        <% end %>
+        <div id="errors">
+        <% if flash[:errors] %>
+            <ul>
+                <% flash[:errors].each do |error| %>
+                    <li><%= error %></li>
+                <% end %>
+             </ul>
+        <% end %>   
+    </div>
         <%= yield %>
     </body>
 </html>

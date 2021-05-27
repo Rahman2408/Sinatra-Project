@@ -140,3 +140,7 @@
   font-family: cursive;
 
 }
+#errors li {
+  color: red;
+  list-style-type: none;
+}
