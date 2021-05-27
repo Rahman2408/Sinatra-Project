@@ -52,6 +52,13 @@
         
     } 
 
+    #main1 h1 {
+      font-family: cursive;
+      color:darkred;
+      text-decoration: underline;
+    }
+
+
     #main1 h2  {
       font-family: cursive;  
       text-align: center;

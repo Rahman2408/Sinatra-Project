@@ -1,6 +1,5 @@
 class TasksController < ApplicationController
     get '/tasks' do
-        # binding.pry
         @tasks = current_user.tasks.where(completed: false)
         @completed_tasks = current_user.tasks.where(completed: true)
         erb :"/tasks/index"

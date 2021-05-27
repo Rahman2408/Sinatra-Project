@@ -74,6 +74,7 @@ DEPENDENCIES
   bcrypt
   dotenv (~> 2.7)
   pry
+  rack (~> 2.2)
   rake
   require_all
   shotgun
